@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Form</title>
+</head>
+<body>
+  <header>
+    <h1 id="title">Request a quote</h1>
+    <p id="description"></p>
+  </header>
+  <main>
+    <form action="" id="survey-form">
+      <label for="name-label">Name</label>
+      <input type="text" id="name" placeholder="Enter your name">
+      <label for="email-label">Email</label>
+      <input type="email" id="email" placeholder="Enter your email" pattern="{1}">
+      <label for="number-label">Budget</label>
+      <input type="number" id="number" placeholder="Enter your budget" min="100" max="100000">
+      <label for="">Select a project type</label>
+      <select name="projects" id="project-select">
+        <option value="general">General Contracting</option>
+        <option value="kitchen">Kitchen</option>
+        <option value="bathroom">Bathroom</option>
+        <option value="addition">Addition</option>
+      </select>
+
+      <button id="submit">Submit</button>
+
+
+    </form>
+  </main>
+  
+</body>
+</html>
