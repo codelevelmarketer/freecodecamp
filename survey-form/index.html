@@ -1,36 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Survey Form</title>
-</head>
-<body>
-  <header>
-    <h1 id="title">Request a quote</h1>
-    <p id="description"></p>
-  </header>
-  <main>
-    <form action="" id="survey-form">
-      <label for="name-label">Name</label>
-      <input type="text" id="name" placeholder="Enter your name">
-      <label for="email-label">Email</label>
-      <input type="email" id="email" placeholder="Enter your email" pattern="{1}">
-      <label for="number-label">Budget</label>
-      <input type="number" id="number" placeholder="Enter your budget" min="100" max="100000">
-      <label for="">Select a project type</label>
-      <select name="projects" id="project-select">
-        <option value="general">General Contracting</option>
-        <option value="kitchen">Kitchen</option>
-        <option value="bathroom">Bathroom</option>
-        <option value="addition">Addition</option>
-      </select>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/survey-form/style.css" />
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <div class="form__title">
+      <h1 id="title">Join Code Level Marketers</h1>
+      <p id="description">
+        This is just a formality! We'd like to learn a bit about you before we
+        send your community invite
+      </p>
+    </div>
 
-      <button id="submit">Submit</button>
+    <div class="form__container">
+      <form action="" id="survey-form">
+        <div class="field__container">
+          <label for="name" id="name-label">Your Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Name"
+            required
+          />
+        </div>
+        <div class="field__container">
+          <label for="email" id="email-label">Your Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email Address"
+            required
+          />
+        </div>
 
+        <div class="field__container">
+          <label for="coding-number" id="number-label"
+            >How many months have you been coding?</label
+          >
+          <input
+            type="number"
+            name="coding-number"
+            id="number"
+            min="0"
+            max="365"
+            placeholder="Enter a number"
+            required
+          />
+        </div>
 
-    </form>
-  </main>
-  
-</body>
+        <div class="field__container">
+          <label for="focus-area" id="dropdown-label"
+            >What is your primary focus?</label
+          >
+          <select name="focus-area" id="dropdown" required>
+            <option value="html-css">HTML &amp; CSS</option>
+            <option value="javascript">JavaScript</option>
+            <option value="python">Python</option>
+            <option value="other">Still figuring it out!</option>
+          </select>
+        </div>
+
+        <div class="field__container">
+          <p>How'd you hear about us?</p>
+          <ul>
+            <li>
+              <label for="friend">Friend</label>
+              <input type="checkbox" name="friend" id="friend" value="friend" />
+            </li>
+            <li>
+              <label for="google">Google</label>
+              <input type="checkbox" name="google" id="google" value="google" />
+            </li>
+          </ul>
+        </div>
+
+        <div class="field__container">
+          <p>How much time per week do you have for coding?</p>
+          <ul>
+            <li>
+              <input type="radio" name="time" id="little" value="little" />
+              <label for="little">Less than 5 hours</label>
+            </li>
+            <li>
+              <input type="radio" name="time" id="medium" value="medium"/>
+              <label for="medium">Between 5 to 10 hours</label>
+            </li>
+            <li>
+              <input type="radio" name="time" id="large" value="large" />
+              <label for="large">More than 10 hours</label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="field__container">
+          <label for="comments">Tell us a bit about yourself</label>
+          <textarea name="comments" id="comments" cols="30" rows="2"></textarea>
+        </div>
+
+        <button type="submit" id="submit">Submit</button>
+      </form>
+    </div>
+
+ 
+  </body>
 </html>

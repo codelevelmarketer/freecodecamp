@@ -1,1 +1,37 @@
-/* https://www.youtube.com/watch?v=E5MEzC0prd4 */
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+.form__container {
+  display: flex;
+  flex-direction: column;
+  border: 5px solid green;
+  align-items: center;
+}
+
+.field__container {
+  padding: 10px 0;
+  /* border: 5px dashed black; */
+  margin: 10px 0;
+}
+
+.field__container label {
+  border: 5px solid yellowgreen;
+  display: inline-block;
+  width: 500px;
+}
+
+.field__container input,
+.field__container select {
+  display: inline-block;
+  border: 5px solid red;
+  width: 250px;
+  font-size: 1rem;
+}
+
+.field__container ul li {
+  list-style: none;
+}
